@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url("image/Background\ pic.jpg");
+    background-size: cover;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 100px;
+    color: white;
+}
+.logo span{
+    color:salmon;
+}
+.menu{
+    list-style: none;
+    display: flex;
+}
+.menu li{
+    float: left;
+    position: relative;
+}
+.menu li a{
+    text-decoration: none;
+    color:white;
+    font-size: 28px;
+    transition: 0.3s;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+}
+.menu li a:hover{
+    color: aquamarine;
+    background-color: brown;
+    transition: 0.4s;
+}
+/* Adding the underline effect */
+.menu > li > a::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color:white;
+    transition: width 0.4s ease;
+}
+.menu > li > a:hover::after{
+    width: 100%;
+}
+/*Dropdown menu design*/
+.menu li ul{
+    position: absolute;
+    background:rgb(3, 85, 117);
+    list-style: none;
+    width: 200px;
+    top:100%;
+    left: 0;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+    display:none ;
+    border-radius: 5px;
+}
+.menu li ul li{
+    float: none;
+}
+.menu li ul li a{
+    color:white;
+    font-size: 28px;
+    padding: 15px 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); 
+}
+.menu li ul li a:hover{
+    color: aquamarine;
+    background-color: brown;
+    transition: 0.4s;
+}
+/*Show the dropdown*/
+.menu li:hover > ul{
+    display: block;
+}
+/*Multiple dropdown when hovering on the parent menu */
+.menu li ul li ul{
+    position: absolute;
+    background: rgb(3, 85, 117);
+    top:0;
+    left:100%;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+}
+/*Multiple dropdown  when hovering on the parent submenu*/
+.menu li ul li:hover > ul{
+    display: block;
+}
+.fa-solid{
+    float:right;
+    margin-left: 10px;
+    padding: 3px;
+}
+
+/*Search bar Design*/
+.search-bar{
+    background:white;
+    display: flex;
+    height: 50px;
+    padding: 10px 15px;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(46, 4, 4, 0.3);
+    border-radius: 35px;
+    transition:all 0.3s ease;
+    margin-right: 30px;
+}
+.search-bar form{
+    display: flex;
+    margin: 0;
+}
+.search-bar input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100%;
+    color: black;
+    background: transparent;
+}
+.search-bar button{
+    padding: 5px 10px 5px 5px;
+    color:black;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background:transparent;
+    transition:  all 0.3s ease;
+}
+.search-bar button:hover{
+    background: skyblue;
+    color:white;
+    transition: 0.4s;
+}
+.search-bar i{
+    font-size: 25px;
+}
+
+.header-text{
+    margin-top: 13%;
+    max-width: 600px;
+    margin-left: 150px;
+}
+.header-text h1{
+    font-size: 50px;
+    color: white;
+    
+}
+.header-text p{
+    font-size: 30px;
+    color: antiquewhite;
+    font-weight: bold;
+}
+.header-text a{
+    padding: 15px 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: rgb(48, 102, 229);
+    border-radius: 35px;
+    
+}
+.header-text a:hover{
+    color: aquamarine;
+    background-color:  brown;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
