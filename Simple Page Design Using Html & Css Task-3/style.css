@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Image/background\ pic.jpg") no-repeat;
+    background-size: cover;
+}
+.header{
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background: transparent;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    margin-left: 110px;
+}
+.menu{
+    list-style: none;
+    display: flex;
+}
+.menu li{
+    float: left;
+    position: relative;
+}
+.menu li a{
+    text-decoration: none;
+    color:white;
+    font-size: 28px;
+    transition: 0.3s;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+.menu li a:hover{
+    color:lightpink;
+    transition: 0.4s;
+}
+/* Adding the underline effect */
+.menu > li > a::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color:white;
+    transition: width 0.4s ease;
+}
+.menu > li > a:hover::after{
+    width: 75%;
+}
+.header-text{
+    margin-top: 13%;
+    max-width: 600px;
+    margin-left: 150px;
+}
+.header-text h1{
+    font-size: 45px;
+    color: white;  
+}
+.header-text p{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.header-text a{
+    padding: 12px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    background: white;
+    border-radius: 10px;   
+}
+.header-text a:hover{
+    color: white;
+    background-color:  black;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
