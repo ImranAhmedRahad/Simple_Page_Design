@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: rgb(105, 110, 113);/*url("Image/background\ pic.jpg") no-repeat;*/
+    background: url("Image/background\ pic.jpg") no-repeat;
     background-size: cover;
 }
 .header{
@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aliceblue;
+    background-color: transparent;
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
@@ -21,7 +21,7 @@ body{
     font-weight: bold;
     text-decoration: none;
     margin-left: 110px;
-    color:black;
+    color:white;
 }
 .menu{
     list-style: none;
@@ -33,7 +33,7 @@ body{
 }
 .menu li a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 30px;
     transition: 0.3s;
     display: block;
@@ -52,11 +52,11 @@ body{
     bottom: 0;
     width: 0;
     height: 3px;
-    background-color: black;
-    transition: width 0.4s ease;
+    background-color: #00abf0;
+    transition: width 0.5s ease;
 }
 .menu > li > a:hover::after{
-    width: 70%;
+    width: 68%;
 }
 .header-text{
     margin-top: 10%;
@@ -86,20 +86,86 @@ body{
     border-radius: 8px;
     margin-right: 20px;
     letter-spacing: 1px;
-    
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s;
+   
 }
 .header-text a:last-child {
     margin-right: 0; 
     background: transparent;
     color: #00abf0;
 }
-.header-text a:hover {
-    background: #0086c3; /* হোভার করলে কালার পরিবর্তন */
+.header-text a:hover{
     color: white;
-    border-color: #0086c3;
+    background: transparent;
+    transition: .5s;
+}
+
+/* Adding the same effect like .icon-add for hover */
+.header-text a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.header-text a:hover::before {
+    width: 100%;
 }
 
 .header-text a:last-child:hover {
+    color: black;
     background: #00abf0;
+    transition: .5s;
+}
+.icon-add{
+    position: absolute;
+    margin-top: 8%;
+    max-width: 250px;
+    margin-left: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+.icon-add a {
+    position: relative;
+    font-size: 30px;
+    text-decoration: none;
+    color: #00abf0;
+    background: transparent;
+    transition: 0.4s;
+    border-radius:30px;
+    margin: 10px 15px;
+    border: 2px solid #00abf0;
+    padding: 8px; 
+    z-index: 1;
+    overflow: hidden; 
+    transition: .5s; 
+}
+.icon-add a:hover {
     color: black;
 }
+
+.icon-add a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+.icon-add a:hover::before{
+    width: 100%;
+}
+
+
+
