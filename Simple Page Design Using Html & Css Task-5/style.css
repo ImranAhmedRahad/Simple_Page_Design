@@ -103,19 +103,3 @@ body{
     background: #00abf0;
     color: black;
 }
-.icon-add{
-    margin-top:18%;
-    display: flex;
-}
-.icon-add a{
-    font-size: 22px;
-    color: #00abf0;
-    background: transparent;
-    transition: 0.4s;
-    border-radius: 50px;
-    margin-right: 10px;
-}
-.icon-add a:hover{
-   color: black;
-   transform: scale(1.2);
-}
