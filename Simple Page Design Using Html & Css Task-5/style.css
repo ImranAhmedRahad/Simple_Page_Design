@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: url("Image/background\ pic.jpg") no-repeat;
+    background: url("Image/background pic.jpg") no-repeat;
     background-size: cover;
 }
 .header{
@@ -99,11 +99,12 @@ body{
 }
 .header-text a:hover{
     color: white;
-    background: transparent;
+    background:transparent;
     transition: .5s;
 }
 
-/* Adding the same effect like .icon-add for hover */
+
+/* Adding the same effect like .icon-add for hover*/ 
 .header-text a::before {
     content: '';
     position: absolute;
@@ -120,11 +121,6 @@ body{
     width: 100%;
 }
 
-.header-text a:last-child:hover {
-    color: black;
-    background: #00abf0;
-    transition: .5s;
-}
 .icon-add{
     position: absolute;
     margin-top: 8%;
@@ -150,6 +146,7 @@ body{
 }
 .icon-add a:hover {
     color: black;
+    background: #00abf0;
 }
 
 .icon-add a::before{
@@ -166,6 +163,8 @@ body{
 .icon-add a:hover::before{
     width: 100%;
 }
+
+
 
 
 
